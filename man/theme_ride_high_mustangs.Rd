@@ -10,7 +10,6 @@ theme_ride_high_mustangs(
   text_font = "Trebuchet MS",
   text_color = "#143F2E",
   title_color = "#358639",
-  line_color = "#F2C75D",
   background_color = "#FFFFFF"
 )
 }
@@ -24,8 +23,6 @@ theme_ride_high_mustangs(
 \item{text_color}{color of the text}
 
 \item{title_color}{color of the title}
-
-\item{line_color}{line color}
 
 \item{background_color}{color of plot's background}
 }
