@@ -2,8 +2,10 @@ Package: coolthemes
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    c(person("Amrit", "Pradhan", , "adpradha@calpoly.edu", 
-    role = c("aut", "cre")), 
+    c(person(given = "Amrit", 
+            family = "Pradhan", 
+            role = c("aut", "cre"),
+            email = "adpradha@calpoly.edu"), 
     person(given = "Chau",
            family = "Nguyen",
            role = c("aut"),
@@ -12,7 +14,6 @@ Authors@R:
            family = "Siegler",
            role = c("aut"),
            email = "hsiegler@calpoly.edu")
-           )
            )
 Description: What the package does (one paragraph).
 License: use_mit_license()
