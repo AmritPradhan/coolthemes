@@ -1,5 +1,5 @@
 Package: coolthemes
-Title: Add Cool Themes to ggplots
+Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
     c(person(given = "Amrit", 
