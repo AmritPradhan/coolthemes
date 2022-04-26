@@ -2,5 +2,6 @@
 
 export("%>%")
 export(theme_ride_high_mustangs)
+export(try_theme_ride_high_mustangs)
 importFrom(ggplot2,theme)
 importFrom(magrittr,"%>%")
