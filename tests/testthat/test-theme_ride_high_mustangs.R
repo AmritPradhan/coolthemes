@@ -41,9 +41,11 @@ test_that("try_theme_ride_high_mustangs works", {
                                     color = "#143F2E"),
           panel.background = element_rect(fill = "ivory"),
           legend.position = "none")
+
   correct_try <- correct_result$theme$text$colour
 
   my_result <- try_theme_ride_high_mustangs(try_plot)
+
   color_try <- my_result$theme$text$colour
 
   expect_equal(color_try, correct_try)
