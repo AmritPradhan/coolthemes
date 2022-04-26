@@ -8,9 +8,9 @@ theme_ride_high_mustangs(
   plot,
   title_font = "Trebuchet MS Bold",
   text_font = "Trebuchet MS",
-  text_color = "#143F2E",
-  title_color = "#358639",
-  background_color = "#FFFFFF"
+  text_color = "#F2C75D",
+  title_color = "#143F2E",
+  background_color = "ivory"
 )
 }
 \arguments{

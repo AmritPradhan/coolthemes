@@ -24,8 +24,6 @@ theme_midnight <- function(text_color = "wheat",
         axis.text = element_text(color = text_color),
         plot.title = element_text(color = title_color),
         plot.subtitle = element_text(color = title_color),
-        plot.caption = element_text(color = title_color)) +
-  scale_fill_brewer(palette = "Set2") +
-  scale_color_brewer(palette = "Set2")
+        plot.caption = element_text(color = title_color))
 
 }
