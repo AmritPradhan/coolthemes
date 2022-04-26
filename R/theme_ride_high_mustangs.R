@@ -24,3 +24,14 @@ theme_ride_high_mustangs <- function(title_font= "Trebuchet MS Bold",
         panel.background = element_rect(fill = background_color),
         legend.position = "none")
 }
+
+#' This is a helper function that allows users to try out the Cal Poly Theme!
+#' @param plot Plot that you want to test the Cal Poly theme on!
+#' @importFrom ggplot2 theme
+#' @export
+
+try_theme_ride_high_mustangs <- function(plot) {
+  plot +
+    theme_ride_high_mustangs()
+
+}
