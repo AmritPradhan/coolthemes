@@ -5,7 +5,6 @@
 \title{A custom theme for ggplot2 visualizations based off of Cal Poly! Ride High Mustangs}
 \usage{
 theme_ride_high_mustangs(
-  plot,
   title_font = "Trebuchet MS Bold",
   text_font = "Trebuchet MS",
   text_color = "#F2C75D",
@@ -14,11 +13,9 @@ theme_ride_high_mustangs(
 )
 }
 \arguments{
-\item{plot}{plot that theme will be applied to}
+\item{title_font}{font for the title}
 
-\item{title_font}{font for title}
-
-\item{text_font}{font for text}
+\item{text_font}{font for the text}
 
 \item{text_color}{color of the text}
 
