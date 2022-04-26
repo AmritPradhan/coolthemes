@@ -13,9 +13,9 @@ theme_ride_high_mustangs(
 )
 }
 \arguments{
-\item{title_font}{font of the title}
+\item{title_font}{font for the title}
 
-\item{text_font}{font of the text}
+\item{text_font}{font for the text}
 
 \item{text_color}{color of the text}
 

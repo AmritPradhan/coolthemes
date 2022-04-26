@@ -4,7 +4,7 @@ test_that("theme_ride_high_mustangs works", {
   test_plot <- iris %>%
     ggplot(mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
     geom_point() +
-    ggtitle("test")
+    ggtitle("Test")
 
   correct_result <- test_plot +
     theme_bw() +
