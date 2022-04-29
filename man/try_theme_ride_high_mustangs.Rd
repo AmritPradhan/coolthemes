@@ -7,8 +7,8 @@
 try_theme_ride_high_mustangs(plot)
 }
 \arguments{
-\item{plot}{Plot that you want to test the Cal Poly theme on}
+\item{plot}{Plot that you want to test the Cal Poly theme on!}
 }
 \description{
-This is a helper function that allows users to try out the Cal Poly custom Theme!
+This is a helper function that allows users to try out the Cal Poly Theme!
 }

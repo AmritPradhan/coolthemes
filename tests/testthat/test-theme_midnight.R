@@ -10,15 +10,21 @@ library(ggplot2)
     theme_midnight()
 
   correct_res <- test_plot +
-    theme(panel.background = element_rect(fill = "gray20"),
-          plot.background = element_rect(fill = "gray20"),
-          legend.background = element_rect(fill = "gray20"),
+    theme(panel.background = element_rect(fill = "gray40"),
+          plot.background = element_rect(fill = "gray40"),
+          legend.background = element_rect(fill = "gray40"),
+          legend.key = element_rect(fill = "gray40"),
           panel.grid.minor = element_line(color = "black"),
           panel.grid.major = element_line(color = "black"),
           text = element_text(color = "wheat"),
           axis.text = element_text(color = "wheat"),
-          plot.title = element_text(color = "wheat"),
-          plot.subtitle = element_text(color = "wheat"),
+          plot.title = element_text(color = "wheat",
+                                    size = 20,
+                                    face = "bold",
+                                    hjust = 0,
+                                    vjust = 2),
+          plot.subtitle = element_text(color = "wheat",
+                                       size = 14),
           plot.caption = element_text(color = "wheat"))
 
   res_color = res$theme$plot.background$fill
