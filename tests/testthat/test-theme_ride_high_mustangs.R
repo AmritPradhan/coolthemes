@@ -1,54 +1,46 @@
-test_that("theme_ride_high_mustangs works", {
-  library(ggplot2)
+#' A custom theme for ggplot2 visualizations based off of Cal Poly! Ride High Mustangs
+#'
+#' @param plot plot that theme will be applied to
+#' @param title_font font for title
+#' @param text_font font for text
+#' @param text_color color of the text
+#' @param title_color color of the title
+#' @param background_color color of plot's background
+#'
+#' @importFrom ggplot2 theme
+#'
+#' @export
 
-  test_plot <- iris %>%
-    ggplot(mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
-    geom_point() +
-    ggtitle("Test")
+theme_ride_high_mustangs <- function(title_font= "Trebuchet MS Bold",
+                     text_font = "Trebuchet MS",
+                     text_color = "#F2C75D",
+                     title_color = "#143F2E",
+                     background_color = "ivory") {
+  theme_bw() +
+  theme(text = element_text(family = text_font,
+                            size = 10,
+                            color = text_color),
+        plot.title = element_text(family = title_font,
+                                  size = 15,
+                                  color = title_color),
+        panel.background = element_rect(fill = background_color),
+        legend.position = "none") +
+    change_axis_text()
+}
 
-  correct_result <- test_plot +
-    theme_bw() +
-    theme(text = element_text(family = "Trebuchet MS",
-                              color = "#F2C75D"),
-          plot.title = element_text(family = "Trebuchet MS Bold",
-                                    color = "#143F2E"),
-          panel.background = element_rect(fill = "ivory"),
-          legend.position = "none")
+#' This is a helper function that adds color to axis text and increases its size
+#' @param axis_text_color Color of the text of the axes.
+#' @importFrom ggplot2 theme
 
-  color_correct <- correct_result$theme$text$colour
+change_axis_text <- function(axis_text_color = "gray49") {
 
-  res <- test_plot +
-    theme_ride_high_mustangs()
+  theme(axis.text = element_text(size = 12,
+                                 color = axis_text_color),
+        axis.title = element_text(size = 14,
+                                  color = axis_text_color))
 
-  color_res <- res$theme$text$colour
-
-  expect_equal(color_res, color_correct)
-
-})
-
-
-test_that("try_theme_ride_high_mustangs works", {
-  try_plot <- iris %>%
-    ggplot(mapping = aes(y = Sepal.Length, x = Sepal.Width)) +
-    geom_line()+
-    ggtitle("test")
-
-  correct_result <- try_plot +
-    theme_bw() +
-    theme(text = element_text(family = 'Trebuchet MS',
-                              color = "#F2C75D"),
-          plot.title = element_text(family = "Trebuchet MS Bold",
-                                    color = "#143F2E"),
-          panel.background = element_rect(fill = "ivory"),
-          legend.position = "none")
-
-  correct_try <- correct_result$theme$text$colour
-
-  my_result <- try_theme_ride_high_mustangs(try_plot)
-
-  color_try <- my_result$theme$text$colour
-
-  expect_equal(color_try, correct_try)
+}
 
 
-})
+
+

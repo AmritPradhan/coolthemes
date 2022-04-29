@@ -22,6 +22,8 @@ theme_ride_high_mustangs(
 \item{title_color}{color of the title}
 
 \item{background_color}{color of plot's background}
+
+\item{plot}{plot that theme will be applied to}
 }
 \description{
 A custom theme for ggplot2 visualizations based off of Cal Poly! Ride High Mustangs
