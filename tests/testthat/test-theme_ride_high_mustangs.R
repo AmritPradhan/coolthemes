@@ -9,10 +9,16 @@ library(ggplot2)
   correct_result <- test_plot +
     theme_bw() +
     theme(text = element_text(family = "Trebuchet MS",
+                              size = 10,
                               color = "#F2C75D"),
           plot.title = element_text(family = "Trebuchet MS Bold",
+                                    size = 15,
                                     color = "#143F2E"),
           panel.background = element_rect(fill = "ivory"),
+          axis.text = element_text(size = 10,
+                                   color = "gray49"),
+          axis.title = element_text(size = 15,
+                                    color = "gray49"),
           legend.position = "none")
 
   color_correct <- correct_result$theme$text$colour
@@ -26,28 +32,26 @@ library(ggplot2)
 
 })
 
-test_that("try_theme_ride_high_mustangs works", {
+test_that("change_axis_text works", {
   try_plot <- iris %>%
     ggplot(mapping = aes(y = Sepal.Length, x = Sepal.Width)) +
     geom_line()+
     ggtitle("test")
 
   correct_result <- try_plot +
-    theme_bw() +
-    theme(text = element_text(family = 'Trebuchet MS',
-                              color = "#F2C75D"),
-          plot.title = element_text(family = "Trebuchet MS Bold",
-                                    color = "#143F2E"),
-          panel.background = element_rect(fill = "ivory"),
-          legend.position = "none")
+    theme(axis.text = element_text(size = 12,
+                                   color = "gray49"),
+          axis.title = element_text(size = 14,
+                                    color = 'gray49'))
 
-  correct_try <- correct_result$theme$text$colour
+  correct_axis <- correct_result$theme$text$colour
 
-  my_result <- try_theme_ride_high_mustangs(try_plot)
+  my_result <- try_plot +
+    change_axis_text()
 
-  color_try <- my_result$theme$text$colour
+  axis_try <- my_result$theme$text$colour
 
-  expect_equal(color_try, correct_try)
+  expect_equal(correct_axis, axis_try)
 
 
 })

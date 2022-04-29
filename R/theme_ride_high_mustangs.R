@@ -18,20 +18,29 @@ theme_ride_high_mustangs <- function(title_font= "Trebuchet MS Bold",
                      background_color = "ivory") {
   theme_bw() +
   theme(text = element_text(family = text_font,
+                            size = 10,
                             color = text_color),
         plot.title = element_text(family = title_font,
+                                  size = 15,
                                   color = title_color),
         panel.background = element_rect(fill = background_color),
-        legend.position = "none")
+        legend.position = "none") +
+    change_axis_text()
 }
 
-#' This is a helper function that allows users to try out the Cal Poly Theme!
-#' @param plot Plot that you want to test the Cal Poly theme on!
+#' This is a helper function that adds color to axis text and increases its size
+#' @param axis_text_color Color of the text of the axes.
 #' @importFrom ggplot2 theme
-#' @export
 
-try_theme_ride_high_mustangs <- function(plot) {
-  plot +
-    theme_ride_high_mustangs()
+change_axis_text <- function(axis_text_color = "gray49") {
+
+  theme(axis.text = element_text(size = 12,
+                                 color = axis_text_color),
+        axis.title = element_text(size = 14,
+                                  color = axis_text_color))
 
 }
+
+
+
+
