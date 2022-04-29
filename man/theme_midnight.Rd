@@ -7,7 +7,7 @@
 theme_midnight(
   text_color = "wheat",
   title_color = "wheat",
-  background_color = "gray20",
+  background_color = "gray40",
   gridline_color = "black"
 )
 }

@@ -7,25 +7,29 @@
 #'
 #' @return ggplot graph with the midnight theme'
 #'
-#' @importFrom ggplot2 theme scale_fill_brewer scale_color_brewer
+#' @importFrom ggplot2 theme
 #'
 #' @export
 theme_midnight <- function(text_color = "wheat",
                            title_color = "wheat",
-                           background_color = "gray20",
+                           background_color = "gray40",
                            gridline_color = "black") {
 
   theme(panel.background = element_rect(fill = background_color),
         plot.background = element_rect(fill = background_color),
         legend.background = element_rect(fill = background_color),
+        legend.key = element_rect(fill = background_color),
         panel.grid.minor = element_line(color = gridline_color),
         panel.grid.major = element_line(color = gridline_color),
         text = element_text(color = text_color),
         axis.text = element_text(color = text_color),
-        plot.title = element_text(color = title_color),
-        plot.subtitle = element_text(color = title_color),
-        plot.caption = element_text(color = title_color)) +
-  scale_fill_brewer(palette = "Set2") +
-  scale_color_brewer(palette = "Set2")
+        plot.title = element_text(color = title_color,
+                                  size = 20,
+                                  face = "bold",
+                                  hjust = 0,
+                                  vjust = 2),
+        plot.subtitle = element_text(color = title_color,
+                                     size = 14),
+        plot.caption = element_text(color = title_color))
 
 }
