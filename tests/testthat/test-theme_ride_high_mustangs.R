@@ -94,6 +94,70 @@ test_that("theme_ride_high_mustangs returns correct background color", {
 
 })
 
+test_that("theme_ride_high_mustangs returns correct title font", {
+  test_plot <- iris %>%
+    ggplot(mapping = aes(x = Sepal.Width, y = Sepal.Length)) +
+    geom_point() +
+    ggtitle("test")
+
+  correct_result <- test_plot +
+    theme_bw() +
+    theme(text = element_text(family = "Trebuchet MS",
+                              size = 15,
+                              color = "#F2C75D"),
+          plot.title = element_text(family = "Trebuchet MS Bold",
+                                    size = 20,
+                                    color = "#143F2E"),
+          panel.background = element_rect(fill = "ivory"),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.text = element_text(size = 12,
+                                   color = "#358639"),
+          legend.position = "none")
+
+  t_correct <- correct_result$theme$text$family
+
+  res <- test_plot +
+    theme_ride_high_mustangs()
+
+  tres <- res$theme$text$family
+
+  expect_equal(tres, t_correct)
+
+})
+
+test_that("theme_ride_high_mustangs returns correct text font", {
+  test_plot <- iris %>%
+    ggplot(mapping = aes(x = Sepal.Width, y = Sepal.Length)) +
+    geom_point() +
+    ggtitle("test")
+
+  correct_result <- test_plot +
+    theme_bw() +
+    theme(text = element_text(family = "Trebuchet MS",
+                              size = 15,
+                              color = "#F2C75D"),
+          plot.title = element_text(family = "Trebuchet MS Bold",
+                                    size = 20,
+                                    color = "#143F2E"),
+          panel.background = element_rect(fill = "ivory"),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.text = element_text(size = 12,
+                                   color = "#358639"),
+          legend.position = "none")
+
+  title_correct <- correct_result$theme$plot.title$family
+
+  res <- test_plot +
+    theme_ride_high_mustangs()
+
+  title_res <- res$theme$plot.title$family
+
+  expect_equal(title_res, title_correct)
+
+})
+
 test_that("change_axis_text returns correct color of axis text", {
   test_plot <- iris %>%
     ggplot(mapping = aes(x = Sepal.Width, y = Sepal.Length)) +
