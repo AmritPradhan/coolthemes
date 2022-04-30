@@ -53,4 +53,5 @@ test_that("change_axis_text works", {
 
   expect_equal(correct_axis, axis_try)
 
+
 })
