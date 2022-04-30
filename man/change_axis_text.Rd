@@ -9,6 +9,9 @@ change_axis_text(axis_text_color = "#358639")
 \arguments{
 \item{axis_text_color}{Color of the text of the axes.}
 }
+\value{
+A ggplot2 theme with axis text color changes
+}
 \description{
 This is a helper function that adds color to axis text and edits its size
 }

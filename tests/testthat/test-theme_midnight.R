@@ -9,22 +9,22 @@ library(ggplot2)
     theme_midnight()
 
   correct_res <- test_plot +
-    theme(panel.background = element_rect(fill = "gray40"),
-          plot.background = element_rect(fill = "gray40"),
-          legend.background = element_rect(fill = "gray40"),
-          legend.key = element_rect(fill = "gray40"),
-          panel.grid.minor = element_line(color = "black"),
-          panel.grid.major = element_line(color = "black"),
-          text = element_text(color = "wheat"),
-          axis.text = element_text(color = "wheat"),
-          plot.title = element_text(color = "wheat",
-                                    size = 20,
-                                    face = "bold",
-                                    hjust = 0,
-                                    vjust = 2),
-          plot.subtitle = element_text(color = "wheat",
-                                       size = 14),
-          plot.caption = element_text(color = "wheat"))
+    theme(
+      panel.grid.minor = element_line(color = "floralwhite"),
+      panel.grid.major = element_line(color = "floralwhite"),
+
+      text = element_text(color = "wheat"),
+      axis.text = element_text(color = "wheat"),
+
+      plot.title = element_text(color = "wheat",
+                                size = 19,
+                                face = "bold",
+                                hjust = 0,
+                                vjust = 3),
+      plot.subtitle = element_text(color = "wheat",
+                                   size = 13),
+      plot.caption = element_text(color = "wheat")
+    )
 
   res_text_color <- my_res$theme$text$colour
 
@@ -49,7 +49,7 @@ test_that("change_background_color works",{
           legend.background = element_rect(fill = "blue"),
           legend.key = element_rect(fill = "blue"))
 
-  res_color <- res$theme$plot.background$fill
+  res_color <- my_res$theme$plot.background$fill
 
   correct_color <- correct_res$theme$plot.background$fill
 
