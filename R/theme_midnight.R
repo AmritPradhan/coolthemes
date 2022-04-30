@@ -36,6 +36,8 @@ theme_midnight <- function(text_color = "wheat",
 #' @param background_color The color of the plot's background
 #'
 #' @return A ggplot theme with a background color
+#'
+#' @importFrom ggplot2 theme
 change_background_color <- function(background_color) {
 
   theme(panel.background = element_rect(fill = background_color),

@@ -21,7 +21,7 @@ theme_midnight(
 \item{gridline_color}{The color of the gridlines}
 }
 \value{
-A ggplot midnight theme'
+A ggplot midnight theme
 }
 \description{
 Midnight Theme for ggplot graph
