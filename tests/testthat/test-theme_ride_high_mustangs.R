@@ -9,13 +9,15 @@ library(ggplot2)
   correct_result <- test_plot +
     theme_bw() +
     theme(text = element_text(family = "Trebuchet MS",
-                              size = 10,
+                              size = 15,
                               color = "#F2C75D"),
           plot.title = element_text(family = "Trebuchet MS Bold",
-                                    size = 15,
+                                    size = 20,
                                     color = "#143F2E"),
           panel.background = element_rect(fill = "ivory"),
-          axis.text = element_text(size = 10,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.text = element_text(size = 12,
                                    color = "#358639"),
           legend.position = "none")
 

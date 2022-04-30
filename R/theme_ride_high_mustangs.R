@@ -1,11 +1,10 @@
 #' A custom theme for ggplot2 visualizations based off of Cal Poly! Ride High Mustangs
 #'
-#' @param plot plot that theme will be applied to
 #' @param title_font font for title
 #' @param text_font font for text
 #' @param text_color color of the text
 #' @param title_color color of the title
-#' @param background_color color of plot's background
+#' @param background_color color of plot's panel background
 #'
 #' @importFrom ggplot2 theme
 #'
@@ -18,12 +17,14 @@ theme_ride_high_mustangs <- function(title_font= "Trebuchet MS Bold",
                      background_color = "ivory") {
   theme_bw() +
   theme(text = element_text(family = text_font,
-                            size = 10,
+                            size = 15,
                             color = text_color),
         plot.title = element_text(family = title_font,
-                                  size = 15,
+                                  size = 20,
                                   color = title_color),
         panel.background = element_rect(fill = background_color),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
         legend.position = "none") +
     change_axis_text()
 }
