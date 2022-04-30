@@ -9,9 +9,7 @@ theme_phoenix_suns(
   title_color = "#E56020",
   panel_color = "#E56020",
   gridline_color = "#5350ea",
-  background_color = "#5350ea",
-  title_font = "sans",
-  text_font = "sans"
+  background_color = "#5350ea"
 )
 }
 \arguments{

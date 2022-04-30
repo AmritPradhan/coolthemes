@@ -2,10 +2,8 @@
 
 export("%>%")
 export(add_purple_gridlines)
-export(dark_pink)
 export(theme_midnight)
 export(theme_phoenix_suns)
 export(theme_ride_high_mustangs)
-import(ggplot2)
 importFrom(ggplot2,theme)
 importFrom(magrittr,"%>%")
