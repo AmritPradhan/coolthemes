@@ -2,13 +2,13 @@
 % Please edit documentation in R/theme_midnight.R
 \name{theme_midnight}
 \alias{theme_midnight}
-\title{Midnight Theme for ggplot graph}
+\title{Midnight Theme for ggplot2 Plot}
 \usage{
 theme_midnight(
   text_color = "wheat",
   title_color = "wheat",
   background_color = "gray40",
-  gridline_color = "black"
+  gridline_color = "floralwhite"
 )
 }
 \arguments{
@@ -16,13 +16,13 @@ theme_midnight(
 
 \item{title_color}{The color of the title, subtitle, and caption}
 
-\item{background_color}{The color of the plot's background}
+\item{background_color}{The color of the background}
 
-\item{gridline_color}{The color of the gridlines}
+\item{gridline_color}{The color of the grid lines}
 }
 \value{
-A ggplot midnight theme
+A ggplot2 midnight theme
 }
 \description{
-Midnight Theme for ggplot graph
+Midnight Theme for ggplot2 Plot
 }

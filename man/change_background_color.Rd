@@ -10,7 +10,7 @@ change_background_color(background_color)
 \item{background_color}{The color of the plot's background}
 }
 \value{
-A ggplot theme with a background color
+A ggplot2 theme with a background color
 }
 \description{
 Adds the background color to the midnight theme
