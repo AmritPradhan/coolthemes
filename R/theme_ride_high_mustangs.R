@@ -6,6 +6,8 @@
 #' @param title_color color of the title
 #' @param background_color color of plot's panel background
 #'
+#' @return A ggplot2 plot with the Cal Poly theme
+#'
 #' @importFrom ggplot2 theme
 #'
 #' @export
