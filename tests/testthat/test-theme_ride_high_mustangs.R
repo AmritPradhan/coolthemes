@@ -16,9 +16,7 @@ library(ggplot2)
                                     color = "#143F2E"),
           panel.background = element_rect(fill = "ivory"),
           axis.text = element_text(size = 10,
-                                   color = "gray49"),
-          axis.title = element_text(size = 15,
-                                    color = "gray49"),
+                                   color = "#358639"),
           legend.position = "none")
 
   color_correct <- correct_result$theme$text$colour
@@ -40,9 +38,7 @@ test_that("change_axis_text works", {
 
   correct_result <- try_plot +
     theme(axis.text = element_text(size = 12,
-                                   color = "gray49"),
-          axis.title = element_text(size = 14,
-                                    color = 'gray49'))
+                                   color = "#358639"))
 
   correct_axis <- correct_result$theme$text$colour
 
