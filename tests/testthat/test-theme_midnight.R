@@ -3,10 +3,9 @@ library(ggplot2)
 
   test_plot <- iris %>%
     ggplot(mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
-    geom_point()+
-    ggtitle("Test")
+    geom_point()
 
-  res <- test_plot +
+  my_res <- test_plot +
     theme_midnight()
 
   correct_res <- test_plot +
@@ -27,11 +26,11 @@ library(ggplot2)
                                        size = 14),
           plot.caption = element_text(color = "wheat"))
 
-  res_title <- res$theme$plot.title$colour
+  res_text_color <- my_res$theme$text$colour
 
-  correct_title <- correct_res$theme$plot.title$colour
+  correct_text_color <- correct_res$theme$text$colour
 
-  expect_equal(res_title, correct_title)
+  expect_equal(res_text_color, correct_text_color)
 
 })
 
@@ -39,10 +38,9 @@ test_that("change_background_color works",{
 
   test_plot <- iris %>%
     ggplot(mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
-    geom_point()+
-    ggtitle("Test")
+    geom_point()
 
-  res <- test_plot +
+  my_res <- test_plot +
     change_background_color(background_color = "blue")
 
   correct_res <- test_plot +
