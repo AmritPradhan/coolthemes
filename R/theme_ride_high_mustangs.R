@@ -23,6 +23,8 @@ theme_ride_high_mustangs <- function(title_font= "Trebuchet MS Bold",
                                   size = 20,
                                   color = title_color),
         panel.background = element_rect(fill = background_color),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
         legend.position = "none") +
     change_axis_text()
 }
