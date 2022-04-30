@@ -5,7 +5,7 @@
 #' @param background_color The color of the plot's background
 #' @param gridline_color The color of the gridlines
 #'
-#' @return A ggplot midnight theme'
+#' @return A ggplot midnight theme
 #'
 #' @importFrom ggplot2 theme
 #'

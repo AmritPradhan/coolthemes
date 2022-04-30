@@ -2,13 +2,13 @@
 % Please edit documentation in R/theme_ride_high_mustangs.R
 \name{change_axis_text}
 \alias{change_axis_text}
-\title{This is a helper function that adds color to axis text and increases its size}
+\title{This is a helper function that adds color to axis text and edits its size}
 \usage{
-change_axis_text(axis_text_color = "gray49")
+change_axis_text(axis_text_color = "#358639")
 }
 \arguments{
 \item{axis_text_color}{Color of the text of the axes.}
 }
 \description{
-This is a helper function that adds color to axis text and increases its size
+This is a helper function that adds color to axis text and edits its size
 }

@@ -27,9 +27,33 @@ library(ggplot2)
                                        size = 14),
           plot.caption = element_text(color = "wheat"))
 
-  res_color = res$theme$plot.background$fill
+  res_title <- res$theme$plot.title$colour
 
-  correct_color = correct_res$theme$plot.background$fill
+  correct_title <- correct_res$theme$plot.title$colour
+
+  expect_equal(res_title, correct_title)
+
+})
+
+test_that("change_background_color works",{
+
+  test_plot <- iris %>%
+    ggplot(mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
+    geom_point()+
+    ggtitle("Test")
+
+  res <- test_plot +
+    change_background_color(background_color = "blue")
+
+  correct_res <- test_plot +
+    theme(panel.background = element_rect(fill = "blue"),
+          plot.background = element_rect(fill = "blue"),
+          legend.background = element_rect(fill = "blue"),
+          legend.key = element_rect(fill = "blue"))
+
+  res_color <- res$theme$plot.background$fill
+
+  correct_color <- correct_res$theme$plot.background$fill
 
   expect_equal(res_color, correct_color)
 

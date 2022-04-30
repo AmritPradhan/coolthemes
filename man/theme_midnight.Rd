@@ -16,12 +16,12 @@ theme_midnight(
 
 \item{title_color}{The color of the title, subtitle, and caption}
 
-\item{background_color}{The color of the plots background}
+\item{background_color}{The color of the plot's background}
 
 \item{gridline_color}{The color of the gridlines}
 }
 \value{
-ggplot graph with the midnight theme'
+A ggplot midnight theme'
 }
 \description{
 Midnight Theme for ggplot graph
