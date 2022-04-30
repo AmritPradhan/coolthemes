@@ -182,4 +182,5 @@ test_that("change_axis_text returns correct color of axis text", {
     expect_equal(correct_axis, axis_try)
 
 
+
 })

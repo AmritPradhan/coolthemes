@@ -31,7 +31,7 @@ theme_ride_high_mustangs <- function(title_font= "Trebuchet MS Bold",
     change_axis_text()
 }
 
-#' This is a helper function that adds color to axis text and increases its size
+#' This is a helper function that adds color to axis text and edits its size
 #' @param axis_text_color Color of the text of the axes.
 #' @importFrom ggplot2 theme
 

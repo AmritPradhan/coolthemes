@@ -1,5 +1,5 @@
 Package: coolthemes
-Title: What the Package Does (One Line, Title Case)
+Title: Contains Cool Themes for ggplot2 Plots
 Version: 0.0.0.9000
 Authors@R: 
     c(person(given = "Amrit", 
@@ -15,8 +15,8 @@ Authors@R:
            role = c("aut"),
            email = "hsiegler@calpoly.edu")
            )
-Description: This package contains various themes that can be added to any ggplot graph.
-License: use_mit_license()
+Description: This package contains various themes that can be added to any ggplot2 graph.
+License: GPL-2
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
