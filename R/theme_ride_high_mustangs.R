@@ -32,12 +32,11 @@ theme_ride_high_mustangs <- function(title_font= "Trebuchet MS Bold",
 #' @param axis_text_color Color of the text of the axes.
 #' @importFrom ggplot2 theme
 
-change_axis_text <- function(axis_text_color = "gray49") {
+change_axis_text <- function(axis_text_color = "#358639") {
 
   theme(axis.text = element_text(size = 12,
-                                 color = axis_text_color),
-        axis.title = element_text(size = 14,
-                                  color = axis_text_color))
+                                 color = axis_text_color))
+
 
 }
 
