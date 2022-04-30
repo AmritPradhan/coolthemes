@@ -17,10 +17,10 @@ theme_ride_high_mustangs <- function(title_font= "Trebuchet MS Bold",
                      background_color = "ivory") {
   theme_bw() +
   theme(text = element_text(family = text_font,
-                            size = 10,
+                            size = 15,
                             color = text_color),
         plot.title = element_text(family = title_font,
-                                  size = 15,
+                                  size = 20,
                                   color = title_color),
         panel.background = element_rect(fill = background_color),
         legend.position = "none") +
