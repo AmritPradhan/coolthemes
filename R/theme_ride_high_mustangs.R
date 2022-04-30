@@ -1,11 +1,10 @@
 #' A custom theme for ggplot2 visualizations based off of Cal Poly! Ride High Mustangs
 #'
-#' @param plot plot that theme will be applied to
 #' @param title_font font for title
 #' @param text_font font for text
 #' @param text_color color of the text
 #' @param title_color color of the title
-#' @param background_color color of plot's background
+#' @param background_color color of plot's panel background
 #'
 #' @importFrom ggplot2 theme
 #'
