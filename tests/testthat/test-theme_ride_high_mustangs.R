@@ -15,6 +15,8 @@ library(ggplot2)
                                     size = 20,
                                     color = "#143F2E"),
           panel.background = element_rect(fill = "ivory"),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
           axis.text = element_text(size = 12,
                                    color = "#358639"),
           legend.position = "none")
